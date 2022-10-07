@@ -1,0 +1,35 @@
+
+$mainColor : white;
+$secondColor : black;
+
+@mixin absoluteCenter($top , $right) {
+    margin-top:  $top;
+    margin-right:  $right;
+}
+@mixin container(){
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+.total{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    @include container()
+}
+.child1{
+    @include absoluteCenter(120px, 20px)
+}
+.btn-next{
+    background-color: $secondColor;
+    color : $mainColor;
+}
+.view-result{
+    flex-grow: 4;
+}
+.btn-button{
+    margin-top: 100px;
+    width: 300px;
+} 
